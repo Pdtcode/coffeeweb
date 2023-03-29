@@ -7,7 +7,7 @@ import Footer from '@/component/Footer'
 export default function Home() {
   return (
     <>
-      <Hero heading=' Đá Coffee Truck' message='Đá Coffee is dedicated to give the best robusta coffee experience!'/>
+      <Hero heading=' Đá Coffee Truck' message='Đá Coffee Truck is dedicated to give the best robusta coffee experience!'/>
       <Slider slides={SliderData}/>
     </>
   )

@@ -51,16 +51,16 @@ export default function Contact() {
     <div >
 
       {/*Overlay For Mobile*/}      
-      <div className='flex items-center justify-center mb-5 bg-inherit bg-center bg-cover contact-bgimg h-screen sm:hidden'>
+      <div className='flex items-center justify-center bg-inherit bg-center bg-cover contact-bgimg h-screen sm:hidden'>
         <div className='absolute top-0 left-0 h-screen right-0 bottom-0 bg-black/60 z-[2]'/>
-          <div className='z-[3] mb-[6rem]'>
-            <div className=' text-white mb-[2rem] ml-[2.5rem] mr-[2rem]'>
-              <h2 className='text-3xl font-bold'>Contact</h2>
+          <div className='z-[3] mb-[5rem] mt-[9rem]'>
+            <div className=' text-white mb-[2rem] ml-[2.5rem] mr-[2.5rem]'>
+              <h2 className='text-2xl font-bold'>Contact</h2>
               <p className=' text-[.6rem] text-yellow-400'>*still need to connect the send button</p>
             </div>
 
       {/*Mobile Form*/}      
-      <form /*onSubmit={handleSubmit}*/ className="rounded-3xl shadow-xl sm:flex flex-col px-[45px] py-[40px] bg-amber-800/40 z-[3] ml-[2rem] mr-[2rem]">
+      <form /*onSubmit={handleSubmit}*/ className="rounded-3xl shadow-xl sm:flex flex-col px-[30px] py-[20px] bg-amber-800/40 z-[3] ml-[2rem] mr-[2rem]">
 
         {/**Full Name */}
         <label for="fullname" className="flex text-gray-500 font-light dark:text-gray-50 pr-10">Full Name 2<span className="text-red-500">*</span></label>
