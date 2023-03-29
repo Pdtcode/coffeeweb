@@ -30,7 +30,7 @@ const Navbar = () => {
     <div style={{backgroundColor: `${color}`}} className='fixed logo left-0 top-0 w-full z-10 ease-in duration-300'>
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
         <Link href='/'>
-          <h1 style={{color: `${textColor}`, }} className='font-bold text-4xl p-2'> Đá Coffee Truck</h1>
+          <h1 style={{color: `${textColor}`, }} className='font-bold text-lg sm:text-3xl p-1'> Đá Coffee Truck</h1>
         </Link>
 
         <ul style={{color: `${textColor}`}} className='hidden sm:flex text-xl p-1 '>
