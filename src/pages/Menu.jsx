@@ -1,5 +1,4 @@
 import Drinks from '@/component/Drinks'
-import Footer from '@/component/Footer'
 import React from 'react'
 
 
@@ -17,8 +16,7 @@ function Menu() {
       </div>
       {/*Menu*/}
       <Drinks/>
-    </div> 
-    <Footer/>   
+    </div>
     </>
 
     

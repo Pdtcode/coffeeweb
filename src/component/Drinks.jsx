@@ -1,11 +1,10 @@
 import React from 'react'
-import Image from 'next/image'
-import Cappuccino from '../../public/Cappuccino.webp'
-import ColdBrew from '../../public/ColdBrew.webp'
-import Espresso from '../../public/Espresso.webp'
-import FlatWhite from '../../public/FlatWhite.webp'
-import HotChocolate from '../../public/HotChocolate.webp'
-import IcedLatte from '../../public/IcedLatte.webp'
+import Cappuccino from '../../public/drinks/Cappuccino.webp'
+import ColdBrew from '../../public/drinks/ColdBrew.webp'
+import Espresso from '../../public/drinks/Espresso.webp'
+import FlatWhite from '../../public/drinks/FlatWhite.webp'
+import HotChocolate from '../../public/drinks/HotChocolate.webp'
+import IcedLatte from '../../public/drinks/IcedLatte.webp'
 import DrinkImg from './DrinkImg'
 
 
@@ -40,11 +39,6 @@ const Drinks = () => {
             <DrinkImg socialImg={IcedLatte}/>
             <p>Iced Latte</p>
             </div>
-            
-            
-
-
-
         </div>
     </div>
     

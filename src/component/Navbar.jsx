@@ -30,26 +30,26 @@ const Navbar = () => {
     <div style={{backgroundColor: `${color}`}} className='fixed logo left-0 top-0 w-full z-10 ease-in duration-300'>
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
         <Link href='/'>
-          <h1 style={{color: `${textColor}`, }} className='font-bold text-4xl p-2'> Đá Coffee</h1>
+          <h1 style={{color: `${textColor}`, }} className='font-bold text-4xl p-2'> Đá Coffee Truck</h1>
         </Link>
 
-        <ul style={{color: `${textColor}`}} className='hidden sm:flex'>
-          <li className='p-4'>
+        <ul style={{color: `${textColor}`}} className='hidden sm:flex text-xl p-1 '>
+          <li className='p-4  hover:text-gray-400'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='p-4'>
+          <li className='p-4  hover:text-gray-400'>
             <Link href='/Menu'>Menu</Link>
           </li>
-          <li className='p-4'>
+          <li className='p-4 hover:text-gray-400'>
             <Link href='/About'>About</Link>
           </li>
-          <li className='p-4'>
+          <li className='p-4 hover:text-gray-400'>
             <Link href='/Shop'>Shop</Link>
           </li>
-          <li className='p-4'>
+          <li className='p-4 hover:text-gray-400'>
             <Link href='/Blog'>Blog</Link>
           </li>
-          <li className='p-4'>
+          <li className='p-4 hover:text-gray-400'>
             <Link href='/Contact'>Contact</Link>
           </li>
         </ul>

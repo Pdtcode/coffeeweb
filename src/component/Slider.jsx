@@ -30,7 +30,7 @@ if (!Array.isArray(slides) || slides.length <= 0) {
                         key={index} 
                         className={
                             index === current
-                            ? 'opacity-[1] ease-in duration-1000'
+                            ? 'opacity-[1] ease-in duration-900'
                             : 'opacity-0 '
                         }
                     >
