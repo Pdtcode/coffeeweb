@@ -10,25 +10,26 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
-  const [logoColor, setLogoColor] = useState('invert-0');
+  const [logoFilter, setLogoFilter] = useState('');
 
   const handleNav = () => {
     setNav(!nav)
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     const changeColor = () => {
-      if(window.scrollY >= 90) {
-        setColor('#ffffff')
-        setTextColor('#000000')
-        setLogoColor('invert')
+      if (window.scrollY >= 90) {
+        setColor('#ffffff');
+        setTextColor('#000000');
+        setLogoFilter('invert(100%)');
       } else {
-        setColor('transparent')
-        setTextColor('#ffffff')
-        setLogoColor('invert-0')         
+        setColor('transparent');
+        setTextColor('#ffffff');
+        setLogoFilter('');
       }
     };
-    window.addEventListener('scroll', changeColor)
+    window.addEventListener('scroll', changeColor);
+    return () => window.removeEventListener('scroll', changeColor);
   }, []);
 
   return (
@@ -37,7 +38,7 @@ const Navbar = () => {
         <Link href='/'>
           <Image
            src={coffeelogo}
-           className={logoColor}
+           style={{ filter: `${logoFilter}` }}
            width= {130}
            height= {130}
           />
