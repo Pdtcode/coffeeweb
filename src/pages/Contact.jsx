@@ -15,7 +15,7 @@ export default function Contact() {
     e.preventDefault();
     const data = { fullname, email, subject, message };
     try {
-      await axios.post('/send-email.php', data);
+      await axios.post('/send-email.js', data);
       console.log('Email sent successfully');
     } catch (error) {
       console.error('Error sending email', error);
