@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Hero from '../component/Hero'
 import { SliderData } from '@/component/SliderData'
 import Slider from '@/component/Slider'

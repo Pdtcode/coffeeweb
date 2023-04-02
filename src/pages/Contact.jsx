@@ -1,41 +1,17 @@
-/**Still need to connect the onSubmit effect */
-
-import React, {useState} from 'react'
-import { sendContactForm } from "../../lib/api";
+import React, { useState } from "react";
 
 
 
-export default function Contact() {
-  const [fullname, setFullname] = useState("");
+const Contact = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  
-  const handleSubmit = async () => {
-    setState((prev) => ({
-      ...prev,
-      isLoading: true,
-    }));
-    try {
-      await sendContactForm(values);
-      setTouched({});
-      setState(initState);
-      toast({
-        title: "Message sent.",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
-    } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-        error: error.message,
-      }));
-    }
+
+  const handleSubmit = async (e) => {
+
   };
-  
-  
+
   return (
     <>
     <div >
@@ -51,8 +27,8 @@ export default function Contact() {
         <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl flex flex-col px-[3rem] py-[3rem] bg-amber-800/40 mt-8">
 
         {/**Full Name */}
-        <label for="fullname" className="text-gray-500 font-light dark:text-gray-50 pr-[20rem]">Full Name<span className="text-red-500">*</span></label>
-        <input type="text" value={fullname} onChange={(e) => {setFullname(e.target.value);}} name="fullname" className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-5" />
+        <label htmlFor="name" className="text-gray-500 font-light dark:text-gray-50 pr-[20rem]">Full Name<span className="text-red-500">*</span></label>
+        <input type="text" value={name} onChange={(e) => {setName(e.target.value);}} name="name" className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-5" />
 
         {/**Email */}
         <label for="email" className="text-gray-50 font-light mt-5">E-mail<span className="text-red-500">*</span></label>
@@ -88,8 +64,8 @@ export default function Contact() {
       <form /**onSubmit={handleSubmit} */ className="rounded-3xl shadow-xl sm:flex flex-col px-[1rem] py-[1rem] bg-amber-800/40 z-[3] ml-[2rem] mr-[2rem]">
 
         {/**Full Name */}
-        <label for="fullname" className="flex text-gray-500 font-light dark:text-gray-50 pr-10">Full Name<span className="text-red-500">*</span></label>
-        <input type="text" value={fullname} onChange={(e) => {setFullname(e.target.value);}} name="fullname" className="bg-transparent border-b py-2 pl-2 pr-1 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-4" />
+        <label htmlFor="name" className="flex text-gray-500 font-light dark:text-gray-50 pr-10">Full Name<span className="text-red-500">*</span></label>
+        <input type="text" value={name} onChange={(e) => {setName(e.target.value);}} name="name" className="bg-transparent border-b py-2 pl-2 pr-1 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-4" />
 
         {/**Email */}
         <label for="email" className="flex text-gray-50 font-light">E-mail<span className="text-red-500">*</span></label>
@@ -120,3 +96,5 @@ export default function Contact() {
   )
 }
 
+
+export default Contact;
