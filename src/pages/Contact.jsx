@@ -1,7 +1,7 @@
 /**Still need to connect the onSubmit effect */
 
 import React, {useState} from 'react'
-import axios from 'axios';
+import { sendContactForm } from "../../lib/api";
 
 
 
@@ -11,14 +11,27 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = { fullname, email, subject, message };
+  const handleSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
     try {
-      await axios.post('/send-email.js', data);
-      console.log('Email sent successfully');
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+      toast({
+        title: "Message sent.",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      });
     } catch (error) {
-      console.error('Error sending email', error);
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: error.message,
+      }));
     }
   };
   
@@ -35,7 +48,7 @@ export default function Contact() {
 
       {/*Desktop Form*/}      
       <div className='hidden sm:flex logo text-xl m-4 z-[3] '>
-        <form onSubmit={handleSubmit} action="/send-email.php" method='POST' className="rounded-3xl shadow-xl flex flex-col px-[3rem] py-[3rem] bg-amber-800/40 mt-8">
+        <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl flex flex-col px-[3rem] py-[3rem] bg-amber-800/40 mt-8">
 
         {/**Full Name */}
         <label for="fullname" className="text-gray-500 font-light dark:text-gray-50 pr-[20rem]">Full Name<span className="text-red-500">*</span></label>
