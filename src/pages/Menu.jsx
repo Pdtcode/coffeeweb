@@ -1,4 +1,4 @@
-import Drinks from '@/component/Drinks'
+import Drinks from '../component/Drinks'
 import React from 'react'
 
 

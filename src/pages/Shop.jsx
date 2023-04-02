@@ -1,4 +1,4 @@
-import Store from '@/component/Store'
+import Store from '../component/Store'
 import React from 'react'
 
 
