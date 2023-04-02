@@ -41,6 +41,7 @@ const Navbar = () => {
            style={{ filter: `${logoFilter}` }}
            width= {130}
            height= {130}
+           alt='logo'
           />
         </Link>
 

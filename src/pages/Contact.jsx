@@ -9,7 +9,8 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
-
+    console.log(name, email, subject, message)
+    
   };
 
   return (
@@ -24,7 +25,7 @@ const Contact = () => {
 
       {/*Desktop Form*/}      
       <div className='hidden sm:flex logo text-xl m-4 z-[3] '>
-        <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl flex flex-col px-[3rem] py-[3rem] bg-amber-800/40 mt-8">
+        <form action="/api/contact" method="POST" className="rounded-3xl shadow-xl flex flex-col px-[3rem] py-[3rem] bg-amber-800/40 mt-8">
 
         {/**Full Name */}
         <label htmlFor="name" className="text-gray-500 font-light dark:text-gray-50 pr-[20rem]">Full Name<span className="text-red-500">*</span></label>
