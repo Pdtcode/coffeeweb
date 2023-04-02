@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import Image from 'next/image'
+import coffeelogo  from '../../public/coffeelogo.png'
 
 
 
@@ -8,6 +10,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
+  const [logoColor, setLogoColor] = useState('invert-0');
 
   const handleNav = () => {
     setNav(!nav)
@@ -18,9 +21,11 @@ const Navbar = () => {
       if(window.scrollY >= 90) {
         setColor('#ffffff')
         setTextColor('#000000')
+        setLogoColor('invert')
       } else {
         setColor('transparent')
-        setTextColor('#ffffff')        
+        setTextColor('#ffffff')
+        setLogoColor('invert-0')         
       }
     };
     window.addEventListener('scroll', changeColor)
@@ -30,7 +35,12 @@ const Navbar = () => {
     <div style={{backgroundColor: `${color}`}} className='fixed logo left-0 top-0 w-full z-10 ease-in duration-300'>
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
         <Link href='/'>
-          <h1 style={{color: `${textColor}`, }} className='font-bold text-lg sm:text-3xl p-1'> Đá Coffee Truck</h1>
+          <Image
+           src={coffeelogo}
+           className={logoColor}
+           width= {130}
+           height= {130}
+          />
         </Link>
 
         <ul style={{color: `${textColor}`}} className='hidden sm:flex text-xl p-1 '>
