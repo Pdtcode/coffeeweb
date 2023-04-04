@@ -1,21 +1,22 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaInstagram } from 'react-icons/fa';
 
-const DrinkImg = ({ socialImg }) => {
+
+const DrinkImg = ({ socialImg, drinkName, message, price }) => {
   return (
     <div className='relative'>
       <Image
         src={socialImg}
         alt='/'
         className='w-full h-full'
-        layout='responsive'
       />
       {/* Overlay */}
       <div className='flex justify-center w-full h-full items-center absolute top-0 left-0 right-0 bottom-0 hover:bg-black/50 group'>
-      <p className='text-gray-300 hidden group-hover:block'>
-        <FaInstagram size={30} className='z-10' />
-      </p>
+      <div className='text-white hidden group-hover:block'>
+        <h1 className='font-bold'>{drinkName}</h1>
+        <p className=' text-[.7rem] ml-2 mr-2'>{message}</p>
+        <p className=' text-[.7rem] ml-2 mr-2'>{price}</p>
+      </div>
       </div>
     </div>
   );

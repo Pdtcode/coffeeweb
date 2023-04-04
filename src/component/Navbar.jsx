@@ -39,8 +39,8 @@ const Navbar = () => {
           <Image
            src={coffeelogo}
            style={{ filter: `${logoFilter}` }}
-           width= {130}
-           height= {130}
+           width= {100}
+           height= {100}
            alt='logo'
           />
         </Link>
@@ -50,10 +50,10 @@ const Navbar = () => {
             <Link href='/'>Home</Link>
           </li>
           <li className='px-4  hover:text-gray-400'>
-            <Link href='/Menu'>Menu</Link>
+            <Link href='/About'>About</Link>
           </li>
           <li className='px-4 hover:text-gray-400'>
-            <Link href='/About'>About</Link>
+            <Link href='/Menu'>Menu</Link>
           </li>
           <li className='px-4 hover:text-gray-400'>
             <Link href='/Shop'>Shop</Link>
@@ -80,10 +80,10 @@ const Navbar = () => {
             <Link href='/' onClick={handleNav}>Home</Link>
           </li>
           <li className='p-4 text-4xl hover:text-gray-500'>
-            <Link href='/Menu'  onClick={handleNav}>Menu</Link>
+            <Link href='/About'  onClick={handleNav}>About</Link>
           </li>
           <li className='p-4 text-4xl hover:text-gray-500'>
-            <Link href='/About' onClick={handleNav}>About</Link>
+            <Link href='/Menu' onClick={handleNav}>Menu</Link>
           </li>
           <li className='p-4 text-4xl hover:text-gray-500'>
             <Link href='/Shop' onClick={handleNav}>Shop</Link>
