@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import {AiOutlineMenu, AiOutlineClose, AiOutlineShoppingCart} from 'react-icons/ai'
 import Image from 'next/image'
 import coffeelogo  from '../../public/coffeelogo.png'
 
@@ -64,6 +64,13 @@ const Navbar = () => {
           <li className='px-4 hover:text-gray-400'>
             <Link href='/Contact'>Contact</Link>
           </li>
+          <li className='px-4 py-1 ml-2 bg-slate-600/40 rounded-full hover:bg-slate-600/80 hover:text-gray-400'>
+            <Link href='/Contact'><AiOutlineShoppingCart/></Link>
+          </li>
+          {/*
+          <li className='px-4 ml-4 rounded-lg bg-amber-300/70 hover:text-amber-600 hover:bg-amber-100'>
+            <Link href='/login'>Login</Link>
+          </li>*/}
         </ul>
 
         {/* Mobile Button*/}
@@ -94,6 +101,9 @@ const Navbar = () => {
           <li className='p-4 text-4xl hover:text-gray-500'>
             <Link href='/Contact' onClick={handleNav}>Contact</Link>
           </li>
+          {/*<li className='p-4 text-4xl hover:text-gray-500'>
+            <Link href='/login' onClick={handleNav}>Login</Link>
+          </li>*/}
         </ul>
         </div>
       </div>

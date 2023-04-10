@@ -5,6 +5,7 @@ const CONTACT_MESSAGE_FIELDS = {
   email: "Email",
   subject: "Subject",
   message: "Message",
+  sub: "Subscibe to Email List"
 };
 
 const generateEmailContent = (data) => {
@@ -26,7 +27,7 @@ const generateEmailContent = (data) => {
 const handler = async (req, res) => {
   if (req.method === "POST") {
     const data = req.body;
-    if (!data || !data.name || !data.email || !data.subject || !data.message) {
+    if (!data || !data.name || !data.email || !data.subject || !data.message || !data.sub ) {
       return res.status(400).send({ message: "Bad request" });
     }
 
