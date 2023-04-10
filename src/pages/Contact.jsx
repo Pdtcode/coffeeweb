@@ -186,7 +186,7 @@ const Contact = () => {
           name="sub"
           value={!formData.sub}
           onChange={handleChange}
-          className=""/>
+          className="mb-4"/>
         </div>
 
         {/**Send */}

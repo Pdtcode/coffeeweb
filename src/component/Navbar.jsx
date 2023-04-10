@@ -49,9 +49,6 @@ const Navbar = () => {
           <li className='px-4  hover:text-gray-400'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='px-4  hover:text-gray-400'>
-            <Link href='/About'>About</Link>
-          </li>
           <li className='px-4 hover:text-gray-400'>
             <Link href='/Menu'>Menu</Link>
           </li>
@@ -74,9 +71,13 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Button*/}
-        <div onClick={handleNav} className='block sm:hidden z-10 mr-5'>
-          {nav ? <AiOutlineClose size={20} style={{color: `${textColor}`}}/> : <AiOutlineMenu size={20} style={{color: `${textColor}`}}/> }
+        <div style={{color: `${textColor}`}} className='px-4 py-1 ml-44 sm:hidden bg-slate-600/40 rounded-full hover:bg-slate-600/80 hover:text-gray-400'>
+            <Link href='/Contact'><AiOutlineShoppingCart/></Link>
         </div>
+        <div onClick={handleNav} className='block sm:hidden z-10 mr-5'>
+          {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} style={{color: `${textColor}`}}/> }
+        </div>
+        
         {/*Mobile Menu*/}
         <div className={nav 
         ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
@@ -85,9 +86,6 @@ const Navbar = () => {
         <ul>
           <li className='p-4 text-4xl hover:text-gray-500'>
             <Link href='/' onClick={handleNav}>Home</Link>
-          </li>
-          <li className='p-4 text-4xl hover:text-gray-500'>
-            <Link href='/About'  onClick={handleNav}>About</Link>
           </li>
           <li className='p-4 text-4xl hover:text-gray-500'>
             <Link href='/Menu' onClick={handleNav}>Menu</Link>

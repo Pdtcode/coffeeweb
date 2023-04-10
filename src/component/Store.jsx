@@ -12,7 +12,6 @@ const Store = () => {
   return (
     
     <div className='max-w-[1240px] mx-auto text-center logo'>
-        <p className='text-2xl font-bold'>Beans</p>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-4 logo'>
             <div>
             <StoreImg socialImg={CostaRica}/>
