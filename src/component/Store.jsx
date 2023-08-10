@@ -1,9 +1,7 @@
 import React from 'react'
-import CostaRica from '../../public/beans/CostaRica.png'
-import Decaf from '../../public/beans/Decaf.png'
-import Ethiopia1 from '../../public/beans/Ethiopia.png'
-import Ethiopia2 from '../../public/beans/Ethiopia2.png'
-import Guatemala from '../../public/beans/Guatemala.png'
+import CostaRica from '../../public/beans/portrait.jpg'
+import Decaf from '../../public/beans/engagement.jpg'
+import Ethiopia1 from '../../public/beans/wedding.jpg'
 import StoreImg from './StoreImg'
 
 
@@ -11,32 +9,22 @@ import StoreImg from './StoreImg'
 const Store = () => {
   return (
     
-    <div className='max-w-[1240px] mx-auto text-center logo'>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-4 logo'>
+    <div className='max-w-[1240px] mx-auto text-center'>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 p-4 text-center items-center'>
             <div>
             <StoreImg socialImg={CostaRica}/>
-            <p>Costa Rica</p>
-            <p className='caveat'>22</p>
+            <p>Portrait</p>
+            <p className='caveat'>800</p>
             </div>
             <div>
             <StoreImg socialImg={Decaf}/>
-            <p>Decaf</p>
-            <p className='caveat'>20</p>
+            <p>Engagements</p>
+            <p className='caveat'>1500</p>
             </div>
             <div>
             <StoreImg socialImg={Ethiopia1}/>
-            <p>Natural Ethiopia</p>
-            <p className='caveat'>22</p>
-            </div>
-            <div>
-            <StoreImg socialImg={Ethiopia2}/>
-            <p>Ethiopia</p>
-            <p className='caveat'>22</p>
-            </div>
-            <div>
-            <StoreImg socialImg={Guatemala}/>
-            <p>Guatemala</p>
-            <p className='caveat'>17</p>
+            <p>Weddings</p>
+            <p className='caveat'>2400</p>
             </div>
         </div>
     </div>

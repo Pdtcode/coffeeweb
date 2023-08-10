@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 
 
-const Contact = () => {
+const contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-    sub: false,
   });
 
 
@@ -41,9 +40,6 @@ const Contact = () => {
   return (
     <>
     <div >
-
-
-
       {/*overlay*/}      
       <div className='items-center justify-center mb-12 bg-inherit bg-center bg-cover contact-bgimg h-screen hidden sm:flex'>
         
@@ -54,7 +50,7 @@ const Contact = () => {
           </div>
 
           {formSubmitted ? (
-          <div className="popup absolute p-14 logo text-xl rounded-lg bg-white translate-[50%] z-[5]">
+          <div className="popup absolute p-14 text-xl rounded-lg bg-white translate-[50%] z-[5]">
             
             <h1 className="mb-4">Thank you for contacting us!</h1>
             <button onClick={handleFormSubmit} className="border-[2px] px-2 translate-x-[5.75rem] translate-y-4">Exit</button>
@@ -62,8 +58,8 @@ const Contact = () => {
         ) : null}
  
       {/*Desktop Form*/}      
-      <div className='hidden sm:flex logo text-xl m-4 z-[3] '>
-        <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl flex flex-col px-[2rem] py-[1rem] bg-amber-800/40 mt-8">
+      <div className='hidden sm:flex text-xl m-4 z-[3] '>
+        <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl flex flex-col px-[2rem] py-[1rem] bg-slate-800/50 mt-8">
 
         {/**Full Name */}
         <label htmlFor="name" className="text-gray-500 font-light dark:text-gray-50 pr-[20rem]">Full Name<span className="text-red-500">*</span></label>
@@ -73,7 +69,7 @@ const Contact = () => {
             value={formData.name}
             onChange={handleChange}
             required 
-            className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-5" />
+            className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-slate-700/40 font-light text-gray-50 mb-5" />
 
         {/**Email */}
         <label for="email" className="text-gray-50 font-light mt-5">E-mail<span className="text-red-500">*</span></label>
@@ -83,7 +79,7 @@ const Contact = () => {
             value={formData.email}
             onChange={handleChange}
             required 
-            className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-5" />
+            className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-slate-700/40 font-light text-gray-50 mb-5" />
 
         {/**Subject */}
         <label for="subject" className="text-gray-500 font-light mt-5 dark:text-gray-50">Subject<span className="text-red-500">*</span></label>
@@ -93,7 +89,7 @@ const Contact = () => {
             value={formData.subject}
             onChange={handleChange}
             required 
-            className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-5" />
+            className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-slate-700/40 font-light text-gray-50 mb-5" />
 
         {/**Message */}
         <label for="message" className="text-gray-500 font-light mt-5 dark:text-gray-50">Message<span className="text-red-500">*</span></label>
@@ -102,19 +98,10 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-5"></textarea>
-        <div>
-          <p className=" text-white">Subscribe to our email list!</p>
-          <input 
-          type="checkbox" 
-          name="sub"
-          value={!formData.sub}
-          onChange={handleChange}
-          className=""/>
-        </div>
+            className="bg-transparent border-b py-3 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-slate-700/40 font-light text-gray-50 mb-5"></textarea>
         
         <div className="flex flex-row items-center justify-start">
-          <button type='submit' className="px-10 mt-8 py-2 bg-amber-800/60 text-gray-50 font-light rounded-md text-lg flex flex-row items-center raleway">
+          <button type='submit' className="px-10 mt-8 py-2 bg-slate-800/80 text-gray-50 font-light rounded-md text-lg flex flex-row items-center raleway">
             Send
           </button>
         </div>
@@ -140,7 +127,7 @@ const Contact = () => {
         ) : null}
 
       {/*Mobile Form*/}      
-      <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl sm:flex flex-col px-[1rem] py-[1rem] bg-amber-800/40 z-[3] ml-[2rem] mr-[2rem]">
+      <form onSubmit={handleSubmit} className="rounded-3xl shadow-xl sm:flex flex-col px-[1rem] py-[1rem] bg-slate-800/50 z-[3] ml-[2rem] mr-[2rem]">
 
         {/**Full Name */}
         <label htmlFor="name" className="flex text-gray-500 font-light dark:text-gray-50 pr-10">Full Name<span className="text-red-500">*</span></label>
@@ -150,7 +137,7 @@ const Contact = () => {
             value={formData.name}
             onChange={handleChange}
             required 
-            className="bg-transparent border-b py-2 pl-2 pr-1 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-4" />
+            className="bg-transparent border-b py-2 pl-2 pr-1 focus:outline-none focus:rounded-md focus:ring-1 ring-slate-700/40 font-light text-gray-50 mb-4" />
 
         {/**Email */}
         <label for="email" className="flex text-gray-50 font-light">E-mail<span className="text-red-500">*</span></label>
@@ -159,7 +146,7 @@ const Contact = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            required className="bg-transparent border-b py-2 pl-2 pr-1 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-4" />
+            required className="bg-transparent border-b py-2 pl-2 pr-1 focus:outline-none focus:rounded-md focus:ring-1 ring-slate-700/40 font-light text-gray-50 mb-4" />
         
         {/**Subject */}
         <label for="subject" className="flex text-gray-500 font-light dark:text-gray-50">Subject<span className="text-red-500">*</span></label>
@@ -169,7 +156,7 @@ const Contact = () => {
             value={formData.subject}
             onChange={handleChange}
             required 
-            className="bg-transparent border-b py-2 pl-2 pr-1 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-4" />
+            className="bg-transparent border-b py-2 pl-2 pr-1 focus:outline-none focus:rounded-md focus:ring-1 ring-slate-700/40 font-light text-gray-50 mb-4" />
 
         {/**Message */}
         <label for="message" className="flex text-gray-500 font-light dark:text-gray-50">Message<span className="text-red-500">*</span></label>
@@ -178,20 +165,10 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            className="bg-transparent border-b py-2 pr-8 pl-2 focus:outline-none focus:rounded-md focus:ring-1 ring-amber-700/40 font-light text-gray-50 mb-2"></textarea>
-        <div>
-          <p className=" text-white">Subscribe to our email list!</p>
-          <input 
-          type="checkbox" 
-          name="sub"
-          value={!formData.sub}
-          onChange={handleChange}
-          className="mb-4"/>
-        </div>
-
+            className="bg-transparent border-b py-2 pr-8 pl-2 focus:outline-none focus:rounded-md focus:ring-1 ring-slate-700/40 font-light text-gray-50 mb-2"></textarea>
         {/**Send */}
         <div className="flex flex-row items-center justify-start">
-          <button type='submit' className="px-10 py-2 bg-amber-800/60 text-gray-50 font-light rounded-md text-lg flex flex-row items-center raleway">
+          <button type='submit' className="px-10 py-2 bg-slate-800/80 text-gray-50 font-light rounded-md text-lg flex flex-row items-center raleway">
             Send
           </button>
         </div>
@@ -207,4 +184,4 @@ const Contact = () => {
 }
 
 
-export default Contact;
+export default contact;

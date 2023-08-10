@@ -13,7 +13,7 @@ function Footer() {
               />        
             </Link>            
 
-            <Link href='https://www.instagram.com/tinsngu/'>
+            <Link href='https://www.instagram.com/devin.ta/'>
               <FaInstagram
               className='p-4'
               size={60}
@@ -23,8 +23,8 @@ function Footer() {
         </div>
 
         <div className='p-2'>
-            <p className='text-center p-1'>© 2023 by Da Coffee.</p>
-            <p className='text-center'>contact@dacoffee.com</p>
+            <p className='text-center p-1'>© 2023 by Everlasting Lens</p>
+            <p className='text-center'>contact@everlastinglens.com</p>
         </div>
 
     </div>

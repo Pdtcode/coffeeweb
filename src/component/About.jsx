@@ -9,7 +9,7 @@ function About() {
     {/*overlay*/}      
     <div className=' items-center justify-center bg-inherit bg-center about-bgimg bg-cover h-[20rem] mb-5'>
       
-        <div className=' absolute ml-5 p-32 text-white z-[3] mt-[1rem]'>
+        <div className=' absolute ml-5 p-28 text-white z-[3] mt-[1rem]'>
           <h2 className='text-5xl font-bold'>About</h2>
         </div>
         <div className=' top-0 left-0 h-[20rem] right-0 bg-black/50 bottom-0 z-[2]'/>

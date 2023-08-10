@@ -19,13 +19,12 @@ import LemonTarts from '../../public/pasteries/lemontart.jpg'
 import ChocoTwists from '../../public/pasteries/cocotwist.jpg'
 
 
-const Drinks = () => {
+const services = () => {
   return (
     
     <div className='max-w-[1240px] mx-auto text-center'>
-      {/**Drink Tab*/}
+      {/**Services*/}
       <div>
-        <p className='text-2xl font-bold mb-10'>Drinks</p>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2'>
               <div >
               <DrinkImg socialImg={Cappuccino} drinkName='Cappuccino' message='2oz espresso + 4 oz steamed milk/alt milk. Hot, semi-frothy drink with a creamy top, milky middle, and full-bodied espresso base.' price='4.50'/>
@@ -45,16 +44,6 @@ const Drinks = () => {
               <div >
               <DrinkImg socialImg={IcedLatte} drinkName='Iced Latte' message='Try any of our signature lattes iced for a refreshing twist on a coffee classic.' price='5.00'/>
               </div>
-          </div>
-      </div>
-
-      {/**Pasteries Tab*/}
-      <div>
-        <p className='text-2xl font-bold mt-10'>Bakery</p>
-        <div className=' mb-10 text-xs logo'>
-          <p>baked by {<Link className=' font-extrabold text-blue-700' href='https://www.instagram.com/sugarfairybakeryokc/'>@sugarfairybakeryokc</Link>}</p> 
-        </div> 
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-4'>
               <div >
               <DrinkImg socialImg={Macarons} drinkName='Macarons' message='Soft, chewy meringue cookies with a flavored filling of your choice.' price='4.50'/>
               </div>
@@ -75,10 +64,9 @@ const Drinks = () => {
               </div>
           </div>
       </div>
-
     </div>
     
   )
 }
 
-export default Drinks
+export default services

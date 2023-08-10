@@ -5,7 +5,7 @@ const CONTACT_MESSAGE_FIELDS = {
   email: "Email",
   subject: "Subject",
   message: "Message",
-  sub: "Subscibe to Email List"
+  sub: "Subscribe to Email List"
 };
 
 const generateEmailContent = (data) => {

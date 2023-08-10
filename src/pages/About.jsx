@@ -1,7 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import founder1 from '../../public/founder1.jpg'
-import founder2 from '../../public/founder2.jpg'
 
 function About() {
   return (
@@ -16,70 +13,17 @@ function About() {
       </div>
       {/*Founder Section*/}
       <div>
-        <h1 className=' text-center logo text-2xl font-bold'>
-          Meet the Founders
-        </h1>
-        <div className='item-center justify-center flex p-2 '>
-        <Image 
-        src={founder1}
-        height={400}
-        width={200}
-        className='p-4 rounded-[50px]'
-        /> 
-        <Image 
-        src={founder2}
-        height={400}
-        width={210}
-        className='p-4 rounded-[50px]'
-        />
-        </div>
         <div className=' raleway text-lg text-left ml-5 mr-5 sm:ml-20 sm:mr-20 border border-gray-400 rounded-3xl '>
-          <p className='p-2'>
-          At Đá Coffee Truck, we're passionate about delivering the perfect cup of coffee every time. Our story began with three friends who shared a love for coffee and a dream of creating a coffee experience like no other. Let us introduce you to our founders:
-          </p>
-          <p className='p-2'>
-          Peter Trinh: Peter is the visionary behind Đá Coffee Truck. With a background in business and a love for coffee culture, he saw an opportunity to create a unique coffee brand that would inspire and delight customers. Peter oversees the business operations of Đá Coffee and is constantly seeking out new ways to improve our products and services.
-          </p>
-          <p className='p-2'>
-          Tin Nguyen: Tin is the heart of Đá Coffee Truck. He brings a deep understanding of coffee sourcing and roasting to our team, having worked in the coffee industry for over a decade. Tin is passionate about creating unique and flavorful coffee blends that are sure to please even the most discerning coffee lovers.
-          </p>
-          <p className='p-2'>
-          Khiem Ngo: Khiem is the creative force behind Đá Coffee Truck. With a background in design and a love for all things coffee, he brings a unique perspective to our branding and marketing efforts. Khiem is responsible for creating the beautiful and engaging visual content that helps to showcase our products and tell our story.
-          </p>
-          <p className='p-2'>
-          Together, Peter, Tin, and Khiem have created a coffee brand that is known for its quality, innovation, and passion. We hope that you'll join us on this journey as we continue to explore new frontiers in the world of coffee.
-          </p>
+          <p className='p-2'> Welcome to Everlasting Lens! Where moments turn into cherished memories. Founded by the creative minds of Devin Ta and Peter Trinh, we are a passionate wedding photography company dedicated to capturing the most precious moments of your special day.</p>
+          <p className='p-2'> With a shared vision and a deep appreciation for the beauty in love stories, Devin and Peter combined their unique talents to create Everlasting Lens. Our journey began with a simple belief: that every love story is a work of art waiting to be beautifully captured. Through our lenses, we strive to weave together the intricate threads of your unique narrative, immortalizing your emotions, laughter, and heartfelt connections.</p>
+          <p className='p-2'> Devin Ta, a seasoned photographer with an eye for detail, has an innate ability to capture the raw emotions that unfold during weddings. His candid shots and keen sense of timing result in images that evoke genuine sentiments. Peter Trinh, on the other hand, brings his artistic flair and technical finesse to the table. His expertise in framing, composition, and post-production ensures that every image is a masterpiece.</p>
+          <p className='p-2'> At Everlasting Lens, we understand that your wedding day is an extraordinary chapter in your life's story. We approach each wedding with a blend of professionalism and personal touch, aiming to make you feel comfortable and confident in front of the camera. Our unobtrusive presence allows us to encapsulate both the grand moments and intimate exchanges, preserving the authentic essence of your celebration.</p>
+          <p className='p-2'> Our commitment to excellence extends beyond the click of a camera. From our initial consultation to the final delivery of your meticulously curated album, we pride ourselves on delivering an experience that exceeds your expectations. We collaborate closely with you to understand your preferences, ensuring that your photos are a true reflection of your love story.</p>
+          <p className='p-2'> As photographers, we consider ourselves storytellers. Through our lenses, we paint pictures that transport you back to the emotions, the laughter, and the love you felt on your wedding day. With Everlasting Lens, your cherished memories become timeless treasures, ready to be relived for generations to come.</p>
+          <p className='p-2'> Join us in this journey as we celebrate the beauty of love, one photograph at a time. Your story is our inspiration, and through our lens, it becomes forever etched in time, an Everlasting Lens capture.</p>
+
         </div>        
       </div>
-
-      {/**Why We Do What We Do? */}
-      
-      <div>
-        <h1 className=' text-center logo text-2xl font-bold mt-10'>
-          Why We Do What We Do?
-        </h1>
-        <div className='item-center justify-center flex p-2 '>
-        </div>
-        <div className=' raleway text-lg text-left ml-5 mr-5 sm:ml-20 sm:mr-20 border border-gray-400 rounded-3xl '>
-          <p className='p-2'>
-          At Đá Coffee Truck, we believe that coffee is more than just a drink - it's an experience. That's why we're dedicated to crafting the perfect cup of coffee every time, using only the highest quality beans and the most innovative brewing techniques. But why do we do it?
-          </p>
-          <p className='p-2'>
-          For Peter, Tin, and Khiem, coffee has always been a passion. They each bring a unique perspective to the world of coffee, whether it's Peter's business acumen, Tin's roasting expertise, or Khiem's creative vision. But what truly drives us is the desire to share our passion with the world.
-          </p>
-          <p className='p-2'>
-          We believe that coffee has the power to bring people together, to spark conversation and connection, and to create moments of joy and inspiration. We want to be a part of that experience, to help people discover the true potential of coffee and to explore all of the amazing flavors and nuances that it has to offer.
-          </p>
-          <p className='p-2'>
-          That's why we've dedicated ourselves to creating a coffee brand that is known for its quality, innovation, and passion. We believe that every cup of coffee should be an adventure, a journey of discovery that brings you closer to the people and the world around you.
-          </p>
-          <p className='p-2'>
-          So why do we do it? Because we love coffee, and we want to share that love with you. We hope that every cup of Đá Coffee Truck brings a smile to your face and a sense of joy to your day.
-          </p>
-        </div>
-        
-      </div>
-
     </div>
     </>
 

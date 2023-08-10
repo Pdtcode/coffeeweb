@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import {AiOutlineMenu, AiOutlineClose, AiOutlineShoppingCart} from 'react-icons/ai'
 import Image from 'next/image'
-import coffeelogo  from '../../public/coffeelogo.png'
+import logo  from '../../public/logo.png'
 
 
 
@@ -33,15 +33,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div style={{backgroundColor: `${color}`}} className='fixed logo left-0 top-0 w-full z-10 ease-in duration-300'>
+    <div style={{backgroundColor: `${color}`}} className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
       <div className='max-w-[1240px] m-auto flex justify-between items-center  text-white'>
         <Link href='/'>
           <Image
-           src={coffeelogo}
+           src={logo}
            style={{ filter: `${logoFilter}` }}
-           width= {100}
-           height= {100}
+           width= {75}
+           height= {75}
            alt='logo'
+           className=' py-4'
           />
         </Link>
 
@@ -50,30 +51,20 @@ const Navbar = () => {
             <Link href='/'>Home</Link>
           </li>
           <li className='px-4 hover:text-gray-400'>
-            <Link href='/Menu'>Menu</Link>
+            <Link href='/packages'>Packages</Link>
           </li>
           <li className='px-4 hover:text-gray-400'>
-            <Link href='/Shop'>Shop</Link>
+            <Link href='/gallery'>Gallery</Link>
           </li>
           <li className='px-4 hover:text-gray-400'>
-            <Link href='/Blog'>Blog</Link>
+            <Link href='/about'>About</Link>
           </li>
           <li className='px-4 hover:text-gray-400'>
-            <Link href='/Contact'>Contact</Link>
+            <Link href='/contact'>Contact Us</Link>
           </li>
-          <li className='px-4 py-1 ml-2 bg-slate-600/40 rounded-full hover:bg-slate-600/80 hover:text-gray-400'>
-            <Link href='/Contact'><AiOutlineShoppingCart/></Link>
-          </li>
-          {/*
-          <li className='px-4 ml-4 rounded-lg bg-amber-300/70 hover:text-amber-600 hover:bg-amber-100'>
-            <Link href='/login'>Login</Link>
-          </li>*/}
         </ul>
 
         {/* Mobile Button*/}
-        <div style={{color: `${textColor}`}} className='px-4 py-1 ml-44 sm:hidden bg-slate-600/40 rounded-full hover:bg-slate-600/80 hover:text-gray-400'>
-            <Link href='/Contact'><AiOutlineShoppingCart/></Link>
-        </div>
         <div onClick={handleNav} className='block sm:hidden z-10 mr-5'>
           {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} style={{color: `${textColor}`}}/> }
         </div>
@@ -99,9 +90,6 @@ const Navbar = () => {
           <li className='p-4 text-4xl hover:text-gray-500'>
             <Link href='/Contact' onClick={handleNav}>Contact</Link>
           </li>
-          {/*<li className='p-4 text-4xl hover:text-gray-500'>
-            <Link href='/login' onClick={handleNav}>Login</Link>
-          </li>*/}
         </ul>
         </div>
       </div>
